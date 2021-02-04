@@ -36,13 +36,14 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
+            "Lendme\\": "app/LendMe/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Lendme\\": "app/LendMe/"
         }
     },
     "minimum-stability": "dev",

@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    
+    $report = new Lendme\Reporting\SalesReporter(new \Lendme\Repositories\SalesRepository);
+    
+    $begin = Carbon\Carbon::now()->subDays(10);
+    $end = Carbon\Carbon::now();
+    
+    return $report->between($begin, $end, new Lendme\Reporting\HtmlOutput);
 });
